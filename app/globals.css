@@ -7,16 +7,9 @@
   --foreground: #171717;
 }
 
-/* @theme inline ไม่จำเป็นต้องมีในไฟล์ CSS จริงๆ ถ้าไม่ได้ใช้ PostCSS Plugin เฉพาะทาง
-   มันดูเหมือนเป็น syntax สำหรับบาง framework หรือการตั้งค่าเฉพาะ
-   ถ้าคุณไม่มี PostCSS plugin ที่ support @theme inline นี้ อาจจะต้องลบทิ้ง
-   หรือย้ายไปเป็นการตั้งค่าในไฟล์ config ของ PostCSS/Tailwind ถ้าจำเป็น
-   ในเบื้องต้น เราจะเก็บไว้ถ้ามันไม่ทำให้เกิด error ครับ
-*/
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /* --font-sans และ --font-mono จะถูกจัดการโดย next/font ใน layout.tsx */
   --font-sans: var(--font-geist-sans); 
   --font-mono: var(--font-geist-mono);
 }
@@ -31,8 +24,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  /* ลบ font-family ออก เพื่อให้ next/font/google จัดการ Inter Font แทน */
-  /* font-family: Arial, Helvetica, sans-serif; */ 
 }
 
 /* Styles สำหรับ chevron icon ที่มาจากไฟล์ HTML เดิม */
@@ -41,4 +32,10 @@ body {
 }
 .chevron-icon.rotate-180 {
   transform: rotate(180deg);
+}
+
+/* Custom scrollbar for table container */
+.table-container {
+  max-height: 70vh; /* ปรับความสูงได้ตามต้องการ */
+  overflow-y: auto; /* ทำให้มี Scrollbar เมื่อเนื้อหาเกิน */
 }
