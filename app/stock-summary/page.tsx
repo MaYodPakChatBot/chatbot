@@ -2,7 +2,7 @@
 'use client'; // กำหนดให้เป็น Client Component เพราะมีการใช้ React Hooks (useState, useEffect, useMemo) และ Event Handlers
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { mockStockRecords, allProductsWithTargets, summaryBranches, getProductUnit, StockRecord, AllProductWithTarget } from '../../utils/mockData'; // นำเข้า Mock Data และ Helper
+import { mockStockRecords, allProductsWithTargets, summaryBranches, getProductUnit, StockRecord, AllProductWithTarget, BranchData } from '../../utils/mockData'; // นำเข้า Mock Data และ Helper
 
 // Type สำหรับรายการสรุปสต๊อกที่รวมกันแล้ว
 interface AggregatedStockSummary {

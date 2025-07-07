@@ -9,7 +9,7 @@ interface AggregatedProductSummary {
   name: string;
   totalQuantity: number;
   unit: string;
-  suppliers: Set<string>; // ใช้ Set เพื่อเก็บชื่อ Supplier ที่ไม่ซ้ำกัน
+  suppliers: string; // ใช้ Set เพื่อเก็บชื่อ Supplier ที่ไม่ซ้ำกัน
 }
 
 export default function OrderSummaryPage() {
